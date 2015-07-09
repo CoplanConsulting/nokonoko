@@ -94,10 +94,10 @@ jQuery(document).ready(function ($) {
 	$( ".customize-post-layouts-wrap .theme-layout-input" ).click( function(){
 
 		/* Updating the data notice */
-		$(this).addClass( 'layout-clicked' )
 		$( ".post-layout-update-status span" ).hide();
 		$( ".post-layout-updating" ).show();
 		var new_layout = $( this ).attr( 'value' );
+		var layout_clicked = $(this);
 
 		/* Start ajax */
 		$.ajax( {
@@ -122,8 +122,8 @@ jQuery(document).ready(function ($) {
 					$( ".post-layout-updated" ).show();
 
 					/* highlight selected. */
-					$( '.layout-clicked' ).parent( '.theme-layout-label' ).siblings( '.theme-layout-label' ).removeClass( 'layout-selected' );
-					$( '.layout-clicked' ).parent( '.theme-layout-label' ).addClass( 'layout-selected' );
+					layout_clicked.parent( '.theme-layout-label' ).siblings( '.theme-layout-label' ).removeClass( 'layout-selected' );
+					layout_clicked.parent( '.theme-layout-label' ).addClass( 'layout-selected' );
 
 				}
 				/* oh no.. something's wrong */
@@ -131,7 +131,6 @@ jQuery(document).ready(function ($) {
 					$( ".post-layout-updating" ).hide();
 					$( ".post-layout-error" ).show();
 				}
-				$( '.layout-clicked' ).removeClass( '.layout-clicked' );
 			}
 		} );
 	});

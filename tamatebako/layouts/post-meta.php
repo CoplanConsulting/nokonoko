@@ -7,7 +7,7 @@
 /* === SET LAYOUT === */
 
 /* Filters the theme layout mod. */
-add_filter( 'theme_mod_theme_layout', 'tamatebako_set_post_layout', 6 );
+add_filter( 'theme_mod_theme_layout', 'tamatebako_set_post_layout', 999 );
 
 
 /**
