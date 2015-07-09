@@ -16,7 +16,7 @@ add_filter( 'theme_mod_theme_layout', 'tamatebako_set_post_layout', 6 );
 function tamatebako_set_post_layout( $layout ) {
 
 	/* Only in front end singular */
-	if ( !is_admin() && is_singular() ){
+	if ( is_singular() ){
 
 		/* Check if current post type has layouts support */
 		if ( in_array( get_post_type( get_queried_object_id() ), tamatebako_layouts_post_types() ) ) {

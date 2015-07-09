@@ -204,3 +204,10 @@ if( true === $layouts_args['customize'] ){
 	tamatebako_include( 'layouts/customizer' );
 }
 
+/**
+ * Load Post Layouts Customizer
+ */
+if( true === $layouts_args['customize'] && true === $layouts_args['post_meta'] ){
+	tamatebako_include( 'layouts/customizer-post' );
+}
+
