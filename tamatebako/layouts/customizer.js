@@ -1,8 +1,6 @@
 jQuery(document).ready(function ($) {
 
-	$( ".check-post-layout" ).click( function(e){
-		e.preventDefault();
-
+	function my_post_layout(){
 		$( ".checking-post-layout-data" ).show();
 		$.ajax( {
 			type: "POST",
@@ -19,8 +17,8 @@ jQuery(document).ready(function ($) {
 				$( ".customize-post-layouts" ).append( '<p class="current-page-layout-info">' + data + '</p>' );
 			}
 		} );
-
-	});
-
+	}
+	wp.customize.previewer.bind('url', my_post_layout );
+	//$( ".check-post-layout" ).click( my_post_layout );
 
 });

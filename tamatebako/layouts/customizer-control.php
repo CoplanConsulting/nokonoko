@@ -74,11 +74,13 @@ class Tamatebako_Customize_Layout extends WP_Customize_Control {
 
 			<div class="customize-post-layouts">
 
+				<p><input type="text" name="_customize-radio-theme_layout" value="haha"></p>
+				<p><a href="#" data-temp-post-id="<?php echo $post_id; ?>" class="check-post-layout">Check current post layouts</a> <span class="checking-post-layout-data" style="color:red;display:none;">checking...</span></p>
+
 				<?php if ( isset( $_GET['url'] ) ){
 					$post_id = url_to_postid( esc_url_raw( $_GET['url'] ) );
 					?>
 
-					<p><a href="#" data-temp-post-id="<?php echo $post_id; ?>" class="check-post-layout">Check current post layouts</a> <span class="checking-post-layout-data" style="color:red;display:none;">checking...</span></p>
 
 				<?php } // end if $_GET ?>
 
