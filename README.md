@@ -1,5 +1,5 @@
 # NokoNoko
-Just another WordPress starter theme.
+Just another WordPress starter theme. (layout post customizer testing)
 
 **Copyright & license**<br />
 This theme is licensed under the [GNU General Public License](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 (GPL) or later.
