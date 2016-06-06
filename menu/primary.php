@@ -1,6 +1,6 @@
 <nav role="navigation" class="menu" id="menu-primary">
 
-	<div class="menu-container menu-dropdown menu-search">
+	<div class="menu-container menu-dropdown">
 
 		<?php tamatebako_menu_toggle( 'primary' ); ?>
 
@@ -14,7 +14,7 @@
 					'menu_id'         => 'menu-primary-items',
 					'menu_class'      => 'menu-items',
 					'fallback_cb'     => 'tamatebako_menu_fallback_cb',
-					'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">%s</ul></div>'
+					'items_wrap'      => '<div class="wrap"><div class="menu-overlay"></div><ul id="%s" class="%s">%s</ul></div>'
 				)
 			);
 			
@@ -23,8 +23,6 @@
 			tamatebako_menu_fallback_cb();
 		}
 		?>
-
-		<?php tamatebako_menu_search_form(); ?>
 
 	</div><!-- .menu-container -->
 

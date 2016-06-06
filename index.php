@@ -13,47 +13,49 @@
 
 		<?php get_header(); ?>
 
-		<?php get_template_part( 'menu/primary' ); ?>
-
 		<div class="wrap">
 
 			<div id="main">
 
+				<?php get_template_part( 'parts/content-header' );?>
+
 				<div class="wrap">
 
-					<main id="content" class="content" role="main">
+					<div class="content-wrap">
 
-						<?php if ( have_posts() ){ /* Posts Found */ ?>
+						<main id="content" class="content" role="main">
 
-							<?php tamatebako_archive_header(); ?>
+							<?php if ( have_posts() ){ /* Posts Found */ ?>
 
-							<div class="wrap">
+								<div class="wrap">
 
-								<?php while ( have_posts() ) {  /* Start Loop */ ?>
+									<?php while ( have_posts() ) {  /* Start Loop */ ?>
 
-									<?php the_post(); /* Load Post Data */ ?>
+										<?php the_post(); /* Load Post Data */ ?>
 
-									<?php /* Start Content */ ?>
-									<?php tamatebako_get_template( 'content' ); // Loads the content/*.php template. ?>
-									<?php /* End Content */ ?>
+										<?php /* Start Content */ ?>
+										<?php tamatebako_get_template( 'content' ); // Loads the content/*.php template. ?>
+										<?php /* End Content */ ?>
 
-								<?php } /* End Loop */ ?>
+									<?php } /* End Loop */ ?>
 
-							</div><!-- #content > .wrap -->
+								</div><!-- #content > .wrap -->
 
-							<?php tamatebako_archive_footer(); ?>
+								<?php tamatebako_archive_footer(); ?>
 
-						<?php } else { /* No Posts Found */ ?>
+							<?php } else { /* No Posts Found */ ?>
 
-							<div class="wrap">
-								<?php tamatebako_content_error(); ?>
-							</div><!-- #content > .wrap -->
+								<div class="wrap">
+									<?php tamatebako_content_error(); ?>
+								</div><!-- #content > .wrap -->
 
-						<?php } /* End Posts Found Check */ ?>
+							<?php } /* End Posts Found Check */ ?>
 
-					</main><!-- #content -->
+						</main><!-- #content -->
 
-					<?php tamatebako_get_sidebar( 'primary' ); ?>
+						<?php tamatebako_get_sidebar( 'primary' ); ?>
+
+					</div><!-- .content-wrap -->
 
 				</div><!-- #main > .wrap -->
 

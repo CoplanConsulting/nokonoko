@@ -1,23 +1,25 @@
 <header role="banner" id="header">
 
-	<div id="branding">
+	<div class="wrap">
 
-		<?php if( current_theme_supports( 'custom-logo' ) ) the_custom_logo(); // custom logo ?>
+		<div id="branding">
 
-		<?php if( is_front_page() && is_home() ){ ?>
+			<?php if( current_theme_supports( 'custom-logo' ) ) the_custom_logo(); // custom logo ?>
 
-			<h1 class="site-title"><a rel="home" href="<?php echo esc_url( user_trailingslashit( home_url() ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php if( is_front_page() && is_home() ){ ?>
 
-		<?php } else { ?>
+				<h1 class="site-title"><a rel="home" href="<?php echo esc_url( user_trailingslashit( home_url() ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
-			<p class="site-title"><a rel="home" href="<?php echo esc_url( user_trailingslashit( home_url() ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+			<?php } else { ?>
 
-		<?php } ?>
+				<p class="site-title"><a rel="home" href="<?php echo esc_url( user_trailingslashit( home_url() ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
 
-		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+			<?php } ?>
 
-	</div><!-- #branding -->
+		</div><!-- #branding -->
 
-	<?php get_template_part( 'menu/social' ); ?>
+		<?php get_template_part( 'menu/primary' ); ?>
+
+	</div><!-- #header > .wrap-->
 
 </header><!-- #header-->

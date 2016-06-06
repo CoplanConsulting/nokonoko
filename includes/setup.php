@@ -13,7 +13,10 @@ if ( ! isset( $content_width ) ){
 /* === Register Sidebars === */
 
 $sidebars_args = array(
-	"primary" => array( "name" => _x( 'Primary Sidebar', 'sidebar name', 'nokonoko' ), "description" => "" ),
+	"primary" => array( "name" => _x( 'Sidebar', 'sidebar name', 'nokonoko' ), "description" => "" ),
+	"footer-1" => array( "name" => _x( 'Footer 1', 'sidebar name', 'nokonoko' ), "description" => "" ),
+	"footer-2" => array( "name" => _x( 'Footer 2', 'sidebar name', 'nokonoko' ), "description" => "" ),
+	"footer-3" => array( "name" => _x( 'Footer 3', 'sidebar name', 'nokonoko' ), "description" => "" ),
 );
 add_theme_support( 'tamatebako-sidebars', $sidebars_args );
 

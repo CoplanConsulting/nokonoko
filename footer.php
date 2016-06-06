@@ -1,3 +1,15 @@
+<div id="footer-widgets">
+
+	<div class="wrap">
+
+		<?php tamatebako_get_sidebar( 'footer-1' ); ?>
+		<?php tamatebako_get_sidebar( 'footer-2' ); ?>
+		<?php tamatebako_get_sidebar( 'footer-3' ); ?>
+
+	</div><!-- #footer-widgets > .wrap -->
+
+</div><!-- #footer-widgets -->
+
 <footer id="footer">
 
 	<?php get_template_part( 'menu/footer' ); ?>

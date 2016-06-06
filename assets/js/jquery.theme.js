@@ -43,20 +43,6 @@ jQuery( document ).ready( function($) {
 		}, false );
 	}
 
-	/* === Menu Search === */
-
-	/* == Search Toggle == */
-	$( ".search-toggle" ).click( function(e) {
-		e.preventDefault();
-		$( this ).parents( ".menu-search" ).toggleClass( "search-toggle-active" );
-		$( this ).siblings( ".search-field" ).focus();
-	});
-
-	/* == Display search form on search pages == */
-	if ( $("body").hasClass("search") ){
-		$( ".search-toggle" ).parents( ".menu-search" ).addClass( "search-toggle-active" )
-	}
-
 	/* === Menu Toggle === */
 
 	/* == Mobile submenu toggle on mobile device == */
@@ -128,6 +114,14 @@ jQuery( document ).ready( function($) {
 	$( ".menu-toggle a" ).click( function(e) {
 		e.preventDefault();
 		$( this ).parents(".menu-container").toggleClass( "menu-toggle-active" );
+		$( "body" ).toggleClass( "body-stop-scroll" );
+	});
+
+	/* == Mobile menu toggle (small screen) == */
+	$( ".menu-overlay" ).click( function(e) {
+		e.preventDefault();
+		$( this ).parents(".menu-container").removeClass( "menu-toggle-active" );
+		$( "body" ).removeClass( "body-stop-scroll" );
 	});
 
 });
