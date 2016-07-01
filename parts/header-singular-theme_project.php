@@ -10,6 +10,7 @@ use fx_wpshop\theme_project\Functions as ThemeProject;
 	<div class="wrap">
 
 		<?php tamatebako_entry_title(); ?>
+
 		<p>WordPress Theme</p>
 
 		<?php ThemeProject::action_buttons(); ?>

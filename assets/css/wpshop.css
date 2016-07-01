@@ -1,3 +1,21 @@
+/* Front Page - Page Template
+------------------------------------------ */
+.page-template-front-page{
+}
+.page-template-front-page #content .entry{
+	border: none;
+	padding: 0;
+}
+.page-template-front-page #main > .wrap{
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
 /* 2 Column Layout (Theme & Plugin  Archive)
 ------------------------------------------ */
 .col-2-layout{}
@@ -258,12 +276,82 @@
 }
 
 
+/* === SINGULAR === */
+.plugin-nav{
+	list-style: none;
+	margin: 0;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	margin-left: -21px;
+	margin-top: -21px;
+	margin-right: -21px;
+	margin-bottom: 20px;
+}
+.plugin-nav:after{
+	content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+.plugin-nav li{
+	float: left;
+}
+	.tab-count-3 li{
+		width: 33.33%;
+	}
+	.tab-count-2 li{
+		width: 50%;
+	}
+.plugin-nav li.selected a{
+	color: #444;
+	cursor: normal;
+}
+.plugin-nav li a{
+	display: block;
+	padding: 15px;
+	border-right: 1px solid #ccc;
+}
+.plugin-nav li:last-child a{
+	border-right: none;
+}
 
+/* Tab Icon */
+#tab-description a:before{
+	content: "\f327";
+	font-family: "esicons";
+	vertical-align: top;
+	margin-right: 10px;
+	-webkit-font-smoothing: antialiased;
+}
+#tab-faq a:before{
+	content: "\f130";
+	font-family: "esicons";
+	vertical-align: top;
+	margin-right: 10px;
+	-webkit-font-smoothing: antialiased;
+}
+#tab-screenshots a:before{
+	content: "\f161";
+	font-family: "esicons";
+	vertical-align: top;
+	margin-right: 10px;
+	-webkit-font-smoothing: antialiased;
+}
+@media screen and (max-width: 650px){
+	/* Make text as screen reader text */
+	.plugin-nav li a span{
+		position: absolute;
+		left: -9999em;
+		top: -9999em;
+	}
+	.plugin-nav li a:before{
+		font-size: 30px;
+		margin-right: 0 !important;
+	}
+}
 
-
-
-
-
+/* Screenshot Panel */
+.panel-screenshots ol{
+	list-style: none;
+	margin: 0;
+}
 
 
 

@@ -3,6 +3,7 @@
  * Single Post Header
  * @since 1.0.0
  */
+use fx_wpshop\theme_project\Functions as PluginProject;
 ?>
 <header class="archive-header content-header">
 
@@ -10,23 +11,14 @@
 
 		<?php tamatebako_entry_title(); ?>
 
-		<div class="entry-byline">
+		<p>WordPress Plugin</p>
 
-			<span class="entry-author vcard">
-				<?php
-				//the_author_posts_link();
-				$author_id = get_post_field ('post_author', get_queried_object_id() );
-				$author_posts_url = get_author_posts_url( $author_id );
-				$author_name = get_the_author_meta( 'display_name', $author_id );
-				?>
-				<a class="url fn n" rel="author" href="<?php echo esc_url( $author_posts_url ); ?>"><span class="author-name"><?php echo $author_name; ?></span></a>
-			</span>
+		<?php PluginProject::action_buttons(); ?>
 
-			<?php tamatebako_entry_date(); ?>
+		<?php PluginProject::lite_download_link(); ?>
 
-			<?php tamatebako_comments_link(); ?>
+		<?php PluginProject::wporg_stats(); ?>
 
-		</div><!-- .entry-byline -->
 
 	</div><!-- .archive-header > .wrap -->
 

@@ -124,4 +124,23 @@ jQuery( document ).ready( function($) {
 		$( "body" ).removeClass( "body-stop-scroll" );
 	});
 
+	/* == PLUGIN PROJECT TAB === */
+	$( '.plugin-tab a' ).click( function(e) {
+		e.preventDefault();
+
+		$( this ).parent( '.plugin-tab' ).addClass( 'selected' );
+		$( this ).parent( '.plugin-tab' ).siblings( '.plugin-tab' ).removeClass( 'selected' );
+
+		var target_el = $( this ).attr( 'href' );
+		$( target_el ).show();
+		$( target_el ).siblings( '.panel' ).hide();
+	});
+
 });
+
+
+
+
+
+
+

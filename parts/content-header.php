@@ -10,6 +10,6 @@ elseif ( is_singular() ){
 	$context = 'singular-' . get_post_type();
 }
 /* Load template */
-if( $context ){
+if( $context && get_the_archive_title() && !is_front_page() && !is_singular() && !is_404() ){
 	get_template_part( 'parts/header', $context );
 }
