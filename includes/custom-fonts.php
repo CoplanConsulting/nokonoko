@@ -19,12 +19,6 @@ $fonts_config = array(
 		'fonts' => array( 'websafe', 'heading', 'base' ),
 		'default' => 'Open Sans',
 	),
-	'font_content_h2' => array(
-		'label' => _x( 'Content Heading 2', 'customizer', 'nokonoko' ),
-		'target' => '.entry-summary h2,.entry-content h2,body#tinymce h2',
-		'fonts' => array( 'heading' ),
-		'default' => 'Cherry Swash',
-	),
 	'font_base' => array(
 		'label' => _x( 'Base Font', 'customizer', 'nokonoko' ),
 		'target' => 'body.wordpress,body#tinymce',
@@ -37,7 +31,7 @@ $fonts_config = array(
 $fonts_settings = array(
 	'editor_styles' => array(
 		'font_base',
-		'font_content_h2',
+		//'font_content_h2',
 	),
 	/**
 	 * Translators: to add an additional font character subset specific to your language

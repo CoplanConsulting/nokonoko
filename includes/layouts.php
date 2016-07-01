@@ -37,3 +37,28 @@ $layouts_strings = array(
 	'global_layout'     => _x( 'Global Layout', 'layout', 'nokonoko' ),
 );
 add_theme_support( 'tamatebako-layouts', $layouts, $layouts_args, $layouts_strings );
+
+
+
+/* Set Layout
+------------------------------------------ */
+add_action( 'template_redirect', 'my_set_layout_template_redirect' );
+
+/**
+ * Force Set Layout
+ * @since 1.0.0
+ */
+function my_set_layout_template_redirect(){
+	if( is_post_type_archive( array( 'theme_project', 'plugin_project' ) ) ){
+		tamatebako_set_layout( 'content' );
+		tamatebako_add_body_class( array( 'col-2-layout' ) );
+	}
+}
+
+
+
+
+
+
+
+

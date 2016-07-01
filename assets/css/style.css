@@ -303,6 +303,9 @@ code{
 #content{
 	width: 100%;
 }
+#content:after{
+	content:".";display:block;height:0;clear:both;visibility:hidden;
+}
 #content > .wrap{
 }
 
